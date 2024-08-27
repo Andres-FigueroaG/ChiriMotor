@@ -1,0 +1,599 @@
+.App {
+  text-align: center;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  border: 0;
+}
+
+.main-nav {
+  position: fixed; /* Cambia a fixed para que permanezca en la parte superior incluso al hacer scroll */
+  top: 0;
+  width: 100%;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10; /* Asegúrate de que sea mayor que otros elementos */
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul li {
+  margin: 0 15px;
+}
+
+.main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+}
+
+.video-header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1; /* El video debe estar debajo de la navegación */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2; /* Asegúrate de que el overlay esté encima del video pero debajo de la navegación */
+}
+
+.content {
+  position: relative;
+  z-index: 3; /* El contenido debe estar encima del video y el overlay */
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+
+.designs {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.designs h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.car-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.car-showcase-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  width: 80%;
+}
+
+.car-showcase-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.car-image {
+  width: 45%;
+  border-radius: 10px;
+}
+
+.car-description {
+  width: 45%;
+  padding: 20px;
+}
+
+.car-description h3 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.car-description p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.carousel-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.carousel-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  position: relative;
+  width: 80%; /* O 70% si prefieres */
+  margin: 0 auto; /* Centra el carrusel */
+  overflow: hidden;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  flex: 0 0 100%;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav {
+  margin-bottom: 10px;
+}
+
+.footer-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav ul li {
+  margin: 0 15px;
+}
+
+.footer-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-info {
+  font-size: 0.7em;
+}
+
+
+/* Sobre Nosotros */
+
+.hero-image {
+  background-image: url('https://www.enriquedans.com/wp-content/uploads/2022/11/Car-dealer-Erik-McLean-Unsplash.jpeg'); /* Cambia el URL por la URL de tu imagen */
+  background-size: cover;
+  background-position: center;
+  height: 80vh; /* Altura del 80% de la pantalla */
+  /*height: 100%;*/
+  width: 100%;
+  position: relative;
+  z-index: 1; /* La imagen hero está debajo de la navegación */
+  margin: 0; /* Asegúrate de que no haya margen */
+  padding: 0; /* Asegúrate de que no haya padding */
+}
+.page-header {
+  padding: 0;
+  text-align: center;
+}
+
+.about-us {
+  padding: 50px 20px;
+  background-color: #e0e0e0;
+}
+
+.about-us-header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.about-us-header p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.about-us-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.about-us-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 80%;
+}
+
+.about-us-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-us-image {
+  width: 50%;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.about-us-text {
+  width: 50%;
+}
+
+.about-us-text h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.about-us-text p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+
+/*modelos*/
+.models {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.models h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.models-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.model-item {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  overflow: hidden;
+}
+
+.model-image {
+  width: 100%;
+  height: auto;
+}
+
+.model-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.model-info h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.model-info p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+
+/*contactanos*/
+.contact-intro {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+}
+
+.contact-intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contact-intro p {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+.contact-details {
+  padding: 50px 20px;
+  background-color: #e0e0e0;
+  text-align: center;
+}
+
+.contact-details h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.contact-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espacio entre tarjetas */
+}
+
+.contact-card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  max-width: 300px;
+  flex: 1 1 calc(33.333% - 40px); /* Tres tarjetas por fila */
+}
+
+.contact-card h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  font-size: 1.2em;
+}
+
+
+/*especificacion de vehiculo*/
+/* especificacion de vehiculo */
+.model-details {
+  padding: 50px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.model-specs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.model-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.model-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.model-info-especificacion {
+  flex: 1;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.model-specs-table {
+  margin-top: 30px;
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.model-specs-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.model-specs-table th, .model-specs-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.model-specs-table th {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.schedule-form-container {
+  display: none;
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.schedule-form h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.schedule-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.schedule-form input[type="text"],
+.schedule-form input[type="email"],
+.schedule-form input[type="date"],
+.schedule-form input[type="time"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.schedule-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.schedule-form button:hover {
+  background-color: #555;
+}
+
+/*.three-scenes-container {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border: 1px solid red;
+}*/
+/*.three-scenes-container {
+  width: 100%;
+  height: 500px; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border: 1px solid red; 
+}*/
+.three-scenes-container {
+  width: 100%;
+  height: 500px; /* Ajusta esta altura según tus necesidades */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-sizing: border-box; /* Asegúrate de que el padding no cause problemas de desbordamiento */
+  overflow: hidden; /* Asegúrate de que no haya desbordamiento */
+}
+
+/*
+.scene-container {
+  width: 30%;
+  height: auto;
+}*/
+/*.scene-container {
+  width: 30%;
+  height: 100%; /* Asegúrate de que la altura sea del 100% del contenedor padre 
+}*/
+.scene-container {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Centra el modelo horizontalmente dentro del contenedor */
+  align-items: center; /* Centra el modelo verticalmente dentro del contenedor */
+}
+

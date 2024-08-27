@@ -1,0 +1,64 @@
+/* ThreeScene.css */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.canvas-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.normal {
+    position: relative;
+    background-color: transparent;
+}
+
+.expand-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.quote-button {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    padding: 10px;
+    background-color: rgba(0, 150, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
